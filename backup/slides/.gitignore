@@ -1,5 +1,0 @@
-resources/public/
-.boot/
-/boot
-target
-.lein-*
