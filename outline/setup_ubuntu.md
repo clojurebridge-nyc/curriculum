@@ -89,27 +89,23 @@ After you run the above commands, run the `lein version` command. It should take
 
 ## Install Nightcode
 
-Go to the [Nightcode releaes site](http://github.com/oakes/Nightcode/releases).
-On the page there, you should see version numbers and links to download specific version of Nightcode, for example, Nightcode-2.0.1.jar.
-Click the link ending in `.jar` and you will download a file, `Nightcode-x.y.z.jar` (for version 1.3.x: `nightcode-x.y.z-standalone.jar`).
-ClojureBridge materials are tested on version 1.3.1, but 2.0.1 also works.
+Go to the [Nightcode release site](http://github.com/oakes/Nightcode/releases).
 
-> The latest version is 2.0.1 as of July 2016.
-> 1.3.x and 2.0.1 are slightly different.
-> But, materials work on 2.0.1
->
-> Since version 2.0.x, Nightcode has binary releases for OSX and windows.
-> However, don't use those. Jar archive is much easier to get started.
+>**Note:** Do NOT go to the main Nightcode page and download the most recent version. The most recent version is Nightcode 2.0.1 (released July 2016), but we will be using a slightly older one (Nightcode 1.3.2) because the new one just came out and might be a little unstable. Plus the user interfaces of the two versions are a bit different, and the current ClojureBridge instructional materials are written for the older one.
 
-Once the download finished, we want to start the editor.
-To startup, go into your Downloads folder (or wherever you save files from your browser) and run the nightcode-x.y.z-standalone.jar file using `java` command.
+On the [Nightcode release site](http://github.com/oakes/Nightcode/releases), you should see version numbers and links to download specific version of Nightcode.
 
+Scroll down to the heading "1.3.2", and click the download link labeled `nightcode-1.3.2-standalone.jar`.
+
+Once the download is finished, we want to start the editor.
+
+To start it up, go into your Downloads folder (or wherever you save files from your browser) and run the `nightcode-1.3.2-standalone.jar` file using the `java` command.
 
 Open a terminal and run the following commands:
 
 ```bash
 cd ~/Downloads/
-java -jar nightcode-1.3.1-standalone.jar
+java -jar nightcode-1.3.2-standalone.jar
 ```
 
 ![Nightcode](img/nightcode-startup.png)
@@ -164,7 +160,7 @@ prompt. Then, the terminal will show you the following message: `user=> Bye for 
 If Nightcode isn't started yet or closed, open it by typing the command on terminal:
 
 ```bash
-java -jar nightcode-1.3.1-standalone.jar
+java -jar nightcode-1.3.2-standalone.jar
 ```
 
 At the bottom left of the screen, type `(+ 1 1)` into the window. It should look like the following image:
