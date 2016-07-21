@@ -293,7 +293,7 @@ ng-click="block21=!block21"></button>
       :else false)))
 
 (defn correct?
-  "Given op and ans, returns message whether ans was corret or not"
+  "Given op and ans, returns message whether ans was correct or not"
   [op ans]
   (if (= ans (true-or-false? op))
       "You won"
@@ -315,9 +315,9 @@ ng-click="block21=!block21"></button>
 
 ```clojure
 ;; usage of correct? function
-(corret? :and false)   ;=> "You won"
-(corret? :or false)    ;=> "You lost"
-(corret? :not true)    ;=> "You won"  (this may be "You lost")
+(correct? :and false)   ;=> "You won"
+(correct? :or false)    ;=> "You lost"
+(correct? :not true)    ;=> "You won"  (this may be "You lost")
 ```
 </section>
 
