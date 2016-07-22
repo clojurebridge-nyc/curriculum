@@ -11,7 +11,7 @@ Set up guide
 
 Curriculum
 ------
-<http://clojurebridge.github.io/curriculum/>
+<http://clojurebridge-nyc.github.io/curriculum/>
 
 * [Introduction to Programming with Clojure](outline/intro.md)
 * [Simple Values](outline/simple_values.md)
