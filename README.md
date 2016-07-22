@@ -8,6 +8,7 @@ Teaching guide
 Set up guide
 ------------
 * [Getting Set Up](outline/setup.md)
+  * Also linked as https://tinyurl.com/clojurebridge-nyc-setup
 
 Curriculum
 ------
