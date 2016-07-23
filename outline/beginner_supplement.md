@@ -173,17 +173,17 @@ all-the-fruits
 Let's create a variable to make a right angle, and use our turtle to make a square:
 
 ```clojure
-(def right-angle 90)
-(def side-length)
+(def angle 90)
+(def size 100)
 
-(forward side-length)
-(right right-angle)
-(forward side-length)
-(right right-angle)
-(forward side-length)
-(right right-angle)
-(forward side-length)
-(right right-angle)
+(forward size)
+(right angle)
+(forward size)
+(right angle)
+(forward size)
+(right angle)
+(forward size)
+(right angle)
 ```
 
 Now try to make an equilateral triangle, in the same way. (Hint: The angle you'll have to turn will be 120).
@@ -192,6 +192,9 @@ And then make an octagon.
 
 
 ## Making functions with defn
+
+
+
  
 ## More fun with turtles (dotimes, etc.)
 
