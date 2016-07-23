@@ -193,9 +193,53 @@ And then make an octagon.
 
 ## Making functions with defn
 
+Making our own functions is even more fun than making variables.
 
+We can use them to name things we want to do, like:
+
+```clojure
+(defn make-a-right-angle []
+  (forward 50)
+  (right 90)
+  (forward 50))
+
+(make-a-right-angle)
+(make-a-right-angle)
+```
+
+And even better is a function that takes "arguments". That way you can have it do something slightly different every time. These arguments are like the variables we create with `def`, except they only mean something inside the function. For instance, say we want to make a square of any size:
+
+```clojure
+(defn draw-square [size]
+  (forward size)
+  (right 90)
+  (forward size)
+  (right 90)
+  (forward size)
+  (right 90)
+  (forward size)
+  (right 90))
+```
 
  
 ## More fun with turtles (dotimes, etc.)
 
+A lot of what programmers do is try to eliminate repetition in their code, so they don't have to read and type the same things over and over again. As we can see, the `draw-square` function is a prime candidate for that. 
+
+We can use a function called `dotimes` to take care of that. We can rewrite draw-square as
+
+```clojure
+(defn draw-square [size]
+  (dotimes [index 4]
+    (forward size)
+    (right 90)))
+```
+
+>Don't worry about the `index` variable there. That is only for if we want to know, for each side we're drawing, what the number of the side is, i.e., whether it's the first side, the second side, etc. We don't need this right now. The important thing is just the number 4.
+
+Play around with `draw-square` for a while, making squares of different sizes.
+
+Now make a `draw-triangle` function, that makes triangles of different sizes. (Hint: the angle is 120).
+
+Bonus: Make a `draw-polygon` function, which takes TWO arguments in its argument list: `size` and `number-of-sides`. Have it draw a polygon. Hint: The appropriate angle to turn each time is 360 divided by the number of sides.
 
