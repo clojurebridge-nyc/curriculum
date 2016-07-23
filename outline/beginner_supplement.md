@@ -94,11 +94,104 @@ All commands in Clojure are surrounded by parentheses, and the first thing after
 
 If the function needs what is called an "argument" -- like a distance for a turtle to travel -- then that goes after the name of the function.
 
-## Math
+## Arithmetic
 
-## Def
+You can add, subtract, multiply, and divide numbers: 
 
-## Defn
+```clojure
+(+ 1 1) 
+;; => 1 + 1 = 2
+
+(- 12 4) 
+;; => 12 - 4 = 8
+
+(* 13 2)
+;; => 13 * 2 = 26
+
+(/ 27 9) 
+;; => 27 / 9 = 3
+```
+
+### Whoa, what's up with putting the arithmetic symbols in front of the numbers?
+
+This is called "prefix" notation, as opposed to what we're used to which is "infix" notation. 
+
+It's a direct consequence of what we were talking about earlier -- in Clojure, everything we do can be thought of as the running of a function, and the name of the function always goes first, right after the opening parenthesis. In this case those math symbols are the function names.
+
+Note that a "function" can be a thing that DOES something -- like `(forward 50)`, which moves a turtle, or it can be a thing that RETURNS something, meaning gives us the answer to a question, like "What is one plus one?": `(+ 1 1)`.
+
+Some people love prefix notation and some people hate it. It's a long and complicated argument, but check out this one example where prefix notation comes in handier:
+
+```clojure
+(6 + 7 + 3 + 2 + 6 + 9)
+```
+
+vs.
+
+```clojure
+(+ 6 7 3 2 6 9)
+```
+
+You can also combine arithmetic expressions in one line:
+
+```clojure
+(+ 8 (/ 20 4)) 
+;; => 8 + 20/4 = 8 + 5 = 13
+```
+
+Now play around with arithmetic for a while. Try to do make some compound expressions, like `(+ 8 (/ 20 4))` above.
+
+Now use arithmetic in some turtle commands! Like this, which will move the turtle forward 50:
+
+```clojure
+(forward (* 5 10))
+```
+
+## Making variables with def
+
+If we had to type the same numbers over and over, it would be very
+hard to write a program. What we need are names for values, so we
+can refer to them in a way we can remember. 
+
+This is called "variable assignment". We can do this with `def`.
+
+```clojure
+(def mangoes 3)
+(def oranges 5)
+(+ mangoes oranges)
+;; => 8
+```
+
+You can assign variables using variables, as well:
+
+```clojure
+(def all-the-fruits (+ mangoes oranges))
+all-the-fruits
+;; => 8
+```
+
+Let's create a variable to make a right angle, and use our turtle to make a square:
+
+```clojure
+(def right-angle 90)
+(def side-length)
+
+(forward side-length)
+(right right-angle)
+(forward side-length)
+(right right-angle)
+(forward side-length)
+(right right-angle)
+(forward side-length)
+(right right-angle)
+```
+
+Now try to make an equilateral triangle, in the same way. (Hint: The angle you'll have to turn will be 120).
+
+And then make an octagon.
+
+
+## Making functions with defn
  
 ## More fun with turtles (dotimes, etc.)
 
