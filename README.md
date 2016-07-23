@@ -22,6 +22,10 @@ Curriculum
 * [Flow Control and Logic](outline/flow_control.md)
 * [[bonus module] Sequences](outline/sequences.md)
 
+---
+
+* [[supplemental module] Beginner Supplement](outline/beginner_supplement.md)
+
 Choices of Capstone App - Part. 2
 ----------------
 * [Turtles Walk](http://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (more function study)
