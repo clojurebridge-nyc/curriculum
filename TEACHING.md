@@ -92,30 +92,30 @@ On 2.0.1, copy&paste region to REPL would be the substitute.
 
 #### Code in file or REPL
 
-Students may confuse where to write code.
-REPL is handy, but doesn't save code.
-Also, on REPL multiline input doesn't work.
-When code needs to be multiline, code should be typed in editor.
-It's a good idea to tell students to save code in a file time to time.
-Also, don't forget to click "Save" button.
+Students may get confused about where to write code.
+REPL is handy, but it doesn't save code.
+Also, multiline input doesn't work on REPL.
+When code needs to be multiline, code should be typed in an editor.
+It's a good idea to tell students to save code in a file from time to time.
+Also, they should not forget to click the "Save" button.
 
 [background]
-Before ClojureBridge used LightTable, which allowed us to do all in editor with InstaREPL.
-So, what students wrote were saved alwasys.
+Before, ClojureBridge used LightTable, which allowed us to do everything in an editor with InstaREPL.
+So whatever students wrote was always saved.
 
 
 #### Keyboard short cut
 
-Materials don't mention about keyboard short cut.
+Materials don't mention keyboard shortcuts.
 We don't have much experience on Nightcode yet,
-so we are not sure the same sure keyboard short cut works on all platform.
-If it does, we will add in the materials.
+so we are not sure whether the same sure keyboard shortcuts work on all platforms.
+If they do, we will add these in the materials.
 Let us know.
 
 
 Beginner and Advanced Tracks
 ----------------------------
-You can survey the attendees ahead of time or during the Installfest to find out their levels of programming experience. If you have multiple teachers available, you could present the material in separate rooms at a different pace, or you could present separate material. Alternatively, you could keep all attendees in the same room but seat them in different tables according to ability.
+You can survey the attendees ahead of time or during the Installfest to find out their levels of programming experience. If you have multiple teachers available, you could present the material in separate rooms at a different pace, or you could present separate material. Alternatively, you could keep all attendees in the same room but seat them at different tables according to ability.
 
 Exercises
 ---------
