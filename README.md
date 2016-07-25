@@ -14,7 +14,7 @@ Curriculum
 ------
 <http://clojurebridge-nyc.github.io/curriculum/>
 
-* [[supplemental module] Pre-Introduction Beginner Supplement](https://github.com/clojurebridge-nyc/beginner-supplement)
+* [[supplemental module] Pre-Intro Supplement for Beginners](https://github.com/clojurebridge-nyc/beginner-supplement)
 * [Introduction to Programming with Clojure](outline/intro.md)
 * [Simple Values](outline/simple_values.md)
 * [Data Structures](outline/data_structures.md)
