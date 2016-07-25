@@ -28,6 +28,7 @@ Please look at [README.md](README.md) instead. :green_heart: :blue_heart:
 
 {% endcomment %}
 
+* [[supplemental module] Pre-Introduction Beginner Supplement](outline/beginner_supplement.md)
 * [Introduction to Programming with Clojure](outline/intro.html)
 * [Simple Values](outline/simple_values.html)
 * [Data Structures](outline/data_structures.html)

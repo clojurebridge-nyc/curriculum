@@ -14,6 +14,7 @@ Curriculum
 ------
 <http://clojurebridge-nyc.github.io/curriculum/>
 
+* [[supplemental module] Pre-Introduction Beginner Supplement](outline/beginner_supplement.md)
 * [Introduction to Programming with Clojure](outline/intro.md)
 * [Simple Values](outline/simple_values.md)
 * [Data Structures](outline/data_structures.md)
@@ -21,10 +22,6 @@ Curriculum
 * [Capstone App: Drawing Lines](http://github.com/ClojureBridge/drawing/blob/master/curriculum/first-program.md)
 * [Flow Control and Logic](outline/flow_control.md)
 * [[bonus module] Sequences](outline/sequences.md)
-
----
-
-* [[supplemental module] Beginner Supplement](outline/beginner_supplement.md)
 
 Choices of Capstone App - Part. 2
 ----------------
