@@ -62,14 +62,14 @@ This is not the only way to present the material. It is just the way we have see
 
 Nightcode
 -----------
-As of July 2016, ClojureBridge mateirals are based on Nightcode 1.3.x. Nightcode 2.0.1 works well but had REPL redesign. Be aware if your workshop will use version 2.0.1.
+As of July 2016, ClojureBridge mateirals are based on Nightcode 1.3.x. Nightcode 2.0.1 works well but has a REPL redesign. Be aware if your workshop will use version 2.0.1.
 The materials will be updated at some point. By then, see following tips to use version 2.0.1.
 
 #### Use jar archive
 
 Nightcode 2.0.x got installer for OSX and Windows.
 However, jar archive is much easier to get started.
-Typing a single java comamnd is the all.
+Typing a single java comamnd is all you need.
 Tell students to download Jar archive.
 
 
@@ -104,7 +104,7 @@ Before, ClojureBridge used LightTable, which allowed us to do everything in an e
 So whatever students wrote was always saved.
 
 
-#### Keyboard short cut
+#### Keyboard shortcuts
 
 Materials don't mention keyboard shortcuts.
 We don't have much experience on Nightcode yet,
@@ -123,7 +123,7 @@ Provide plenty of time for exercises. That is where the real fun happens. TAs sh
 
 Capstone App
 ------------
-Budget your time so that you have enough time for the part. 2 project at the end of the day.
+Budget your time so that you have enough time for the part 2 project at the end of the day.
 
 Outline
 -------
