@@ -65,7 +65,7 @@ Oracle JDK 8
 -------------
 
 #### Ubuntu
-Main curriculum and most of other materials are adjusted to Nightcode 2.1.0. This version needs Oracle JDK 8. Linux OSes are normally shipped with OpenJDK. Linux students need to install Oracle Java. The setup document only explains how to do by `apt-get`. However, they have a choice to downlad JDK and setup JAVA_HOME/PATH environment variables. They may logout once to make those variables effect on a new shell.
+Main curriculum and most of other materials are adjusted to Nightcode 2.3.3. This version needs Oracle JDK 8. Linux OSes are normally shipped with OpenJDK. Linux students need to install Oracle Java. The setup document only explains how to do by `apt-get`. However, they have a choice to downlad JDK and setup JAVA_HOME/PATH environment variables. They may logout once to make those variables effect on a new shell.
 
 #### El Capitan
 OSX El Capitan doesn't have Java bundled anymore. El Capitan Students must install Oracle JDK 8.
@@ -75,7 +75,7 @@ Installation steps are the same as Windows, fairly easy. However, after installa
 Nightcode
 ---------
 
-As of September 2016, ClojureBridge materials are based on Nightcode 2.1.0. This version has only one REPL on the bottom and InstaREPL. However, InstREPL doesn't work well with Quil and Overton apps. For simple core Clojure only exercies, students can use `myproject` (this should be created while leningen setup) and InstaREPL.
+As of September 2016, ClojureBridge materials are based on Nightcode 2.3.3. This version has only one REPL on the bottom and InstaREPL. However, InstREPL doesn't work well with Quil and Overton apps. For simple core Clojure only exercies, students can use `myproject` (this should be created while leningen setup) and InstaREPL.
 
 #### Use jar archive
 
