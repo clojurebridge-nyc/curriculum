@@ -116,12 +116,6 @@ Click the link ending in `.jar` and you will download a file, `Nightcode-x.y.z.j
 Once the download finished, we want to start the editor.
 To startup, go into your Downloads folder (or wherever you save files from your browser) and run the Nightcode-x.y.z.jar file using `java` command.
 
-Scroll down to the heading "1.3.2", and click the download link labeled `nightcode-1.3.2-standalone.jar`.
-
-Once the download is finished, we want to start the editor.
-
-To start it up, go into your Downloads folder (or wherever you save files from your browser) and run the `nightcode-1.3.2-standalone.jar` file using the `java` command.
-
 Open a terminal and run the following commands:
 
 ```bash
