@@ -4,7 +4,7 @@ Ubuntu Setup
 * Start a terminal
 * Install Git
 * Configure Git
-* Make sure Java is installed
+* Install Java
 * Install Leiningen
 * Install Nightcode
 * Test your setup
@@ -53,19 +53,40 @@ Expected result:
 `your email address`
 
 
-## Making sure Java is installed
+## Install Java
 
-Run `java -version` in your terminal. If you do not have Java installed, Ubuntu will prompt you to install it. It should look something like this:
+Ubuntu comes with OpenJDK installed.
+However, newer versions of Nightcode have a problem to run on OpenJDK.
+Oracle JDK 8 is the best Java to go over our materials.
 
-![no java](img/ubuntu/no_java.png)
+```bash
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+(follow the instruction)
+```
 
-Follow all of the directions Ubuntu gives you, selecting the package "openjdk-7-jre" then return to this part of the tutorial and run `java -version` again.
+At this moment, you have installed Oracle JDK 8 on your Ubuntu box.
+There's one more step to use newly installed Oracle JDK 8.
 
-If Java is installed, you will see something like this in your terminal:
+```bash
+sudo update-alternatives --config java
+(choose /usr/lib/jvm/java-8-oracle/jre/bin/java)
+```
 
-![Java version](img/ubuntu/java_version.png)
+Run `java -version` in your terminal. You should see something like this in your terminal:
 
-The details of Java's version may differ from what you see above; that is perfectly fine.
+![Java version](img/ubuntu/ubuntu-java-version.png)
+
+The minor version may differ from what you see above; however, it must be `1.8.0`.
+Also, you should see `Java(TM) SE Runtime Environment`.
+
+
+
+Alternatively, you may download Java Development Kit (JDK) from
+[Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+In this case, you need to set `JAVA_HOME` and `PATH` environment variables after extracting the archive.
+
 
 ## Install Leiningen
 
@@ -89,11 +110,16 @@ After you run the above commands, run the `lein version` command. It should take
 
 ## Install Nightcode
 
-Go to the [Nightcode release site](http://github.com/oakes/Nightcode/releases).
+Go to the [Nightcode releases site](http://github.com/oakes/Nightcode/releases).
+On the page there, you should see version numbers and links to download specific version of Nightcode, for example, Nightcode-2.1.0.jar.
+Click the link ending in `.jar` and you will download a file, `Nightcode-x.y.z.jar`.
 
->**Note:** Do NOT go to the main Nightcode page and download the most recent version. The most recent version is Nightcode 2.0.1 (released July 2016), but we will be using a slightly older one (Nightcode 1.3.2) because the new one just came out and might be a little unstable. Plus the user interfaces of the two versions are a bit different, and the current ClojureBridge instructional materials are written for the older one.
+> Don't download platform specific binary releases.
+> Use jar archive.
+> Jar archive is much easier to get started.
 
-On the [Nightcode release site](http://github.com/oakes/Nightcode/releases), you should see version numbers and links to download specific version of Nightcode.
+Once the download finished, we want to start the editor.
+To startup, go into your Downloads folder (or wherever you save files from your browser) and run the Nightcode-x.y.z.jar file using `java` command.
 
 Scroll down to the heading "1.3.2", and click the download link labeled `nightcode-1.3.2-standalone.jar`.
 
@@ -105,7 +131,7 @@ Open a terminal and run the following commands:
 
 ```bash
 cd ~/Downloads/
-java -jar nightcode-1.3.2-standalone.jar
+java -jar Nightcode-2.1.0.jar
 ```
 
 ![Nightcode](img/nightcode-startup.png)
@@ -115,9 +141,41 @@ java -jar nightcode-1.3.2-standalone.jar
 
 You have set up Java, Leiningen, Nightcode, and Git on your computer--all the tools you will need for this course. Before starting, we need to test them out.
 
+#### Testing Leiningen
+
+Open a new terminal and run the following command:
+
+```bash
+lein new myproject
+```
+
+This will create a new project, `myproject`, which has files to form a Clojure project.
+Normally, Clojure code exists within such Clojure project.
+
+Run following commands:
+
+```bash
+cd myproject
+lein repl
+```
+
+This may take long to start up for the first time.
+Leiningen downloads libraries it needs to run Clojure.
+When Leiningen starts, you'll see `user=>` prompt on your terminal.
+
+![Testing lein repl](img/ubuntu/testing-lein-repl.png)
+
+Now, you are ready to use __REPL__, which we learn about soon.
+It's a special terminal for Clojure.
+
+At the REPL prompt, type `(+ 1 1)` and press Return. Did you get the answer `2` back? Great!
+
+Your leiningen install looks good. For now, press the Control button and D button on your keyboard together (abbreviated as Ctrl+D). This should take you out of the Clojure REPL and back to your normal terminal prompt. Then, the terminal will show you the following message: `user=> Bye for now!`
+
+
 #### Cloning out github repository
 
-Go to your terminal and run the following command:
+Open another terminal and run the following command:
 
 ```bash
 git clone https://github.com/ClojureBridge/welcometoclojurebridge
@@ -128,44 +186,30 @@ Your terminal should look similar to this picture:
 
 ![Testing git clone](img/ubuntu/testing-git-clone.png)
 
-#### Testing `lein repl`
-
-Then run the command:
+Once it finishes, type following commands on the same terminal.
 
 ```bash
 cd welcometoclojurebridge
+ls
 ```
 
-This will take you to the directory with the source code. After that completes, run:
+You'll see the list of directories/files like this:
 
-```bash
-lein repl
 ```
-
-This could take a long time, and will download many other pieces of code it relies on. You should see lines that start with `Retrieving ...` on your screen. When it finishes, your terminal should look like the following:
-
-![Testing lein repl](img/ubuntu/testing-lein-repl.png)
-
-This is starting a REPL, which we will learn about soon. It's a
-special terminal for Clojure. At the REPL prompt, type `(+ 1 1)` and
-press Return. Did you get the answer `2` back? You will learn more
-about that in the course. For now, press the Control button and D
-button on your keyboard together (abbreviated as Ctrl+D). This should
-take you out of the Clojure REPL and back to your normal terminal
-prompt. Then, the terminal will show you the following message: `user=> Bye for now!`
-
+README.md       outline         project.clj     resources       src
+```
 
 #### Testing Nightcode
 
 If Nightcode isn't started yet or closed, open it by typing the command on terminal:
 
 ```bash
-java -jar nightcode-1.3.2-standalone.jar
+java -jar Nightcode-2.1.0.jar
 ```
 
-At the bottom left of the screen, type `(+ 1 1)` into the window. It should look like the following image:
+At the bottom right of the screen, type `(+ 1 1)` into the window. It should look like the following image:
 
-<img src="img/nightcode-repl.png" alt="Testing Nightcode" width="500">
+![Testing Nightcode](img/nightcode-repl.png)
 
 If you see the result, 2, that worked, great!
 
@@ -179,15 +223,15 @@ On the top left corner, click "Import" then find the directory,
 In the project directory tree on the left, click on `src` - `welcometoclojurebridge` - `core.clj`. The `core.clj` file will be opened on the right side.
 This is a Clojure program.
 
-<img src="img/nightcode-click-import.png" alt="Testing apps - click import" width="500">
-<img src="img/nightcode-open-project.png" alt="Testing apps - open welcometoclojurebridge" width="500">
+![Testing apps - click import](img/nightcode-click-import.png)
+![Testing apps - open welcometoclojurebridge](img/nightcode-open-project.png)
 ![Testing apps - core.clj](img/nightcode-welcometoclojurebridge-core.png)
 
 
 The next step is to run the code shown in the window.
-Click "Run with REPL" on the bottom of the right side.
+Click "Run with REPL" on the bottom.
 It may take a while.
-Eventually, repl will start and show a prompt on the bottom of the window.
+Eventually, REPL will start and show a prompt, `user=>`.
 Once, you see the prompt, click "Reload" button.
 
 
